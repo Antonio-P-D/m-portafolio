@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mí_portafolios</title>
+	<style type="text/css">
+      /*comunes*/
+		figure>img{
+			width: 100%;
+		}
+		a,li{
+      text-decoration: none;
+      list-style-type: none;
+        }
+		body{
+			margin: 2%;
+			background: linear-gradient(43deg, rgba(15,15,15,1) 2%, rgba(45,70,193,0.9941176299621411) 23%, rgba(5,129,237,1) 49%, rgba(83,4,249,1) 100%);
+			background-repeat: no-repeat;
+			background-size: cover;
+			font-family: calibri, helvetica, arial, sans-serif;
+		}
+      /*aquí empieza el header*/
+		header{
+			text-align: center;
+		}
+		header>figure>img{
+			border-radius: 10%;
+			max-width: 25%;
+      min-width: 150px;
+		}
+    @property --a {
+      syntax: "<angle>";
+      inherits: false;
+      initial-value: 0deg; 
+    }
+    @property --i {
+      syntax: "<number>";
+      inherits: false;
+      initial-value: 0; 
+    }
+    img {
+      aspect-ratio: 1;
+      border-radius: 30px;
+      border: 5px solid #ccc;
+      padding: 10px;
+      mask: 
+        conic-gradient(#000 0 0) content-box,
+        linear-gradient(calc(mod(var(--a),180deg)*    var(--i) + var(--_a,45deg)),
+          #0000 30%,#000 40% 60%,#0000 70%) subtract,
+         conic-gradient(#000 0 0) padding-box;
+       transition: --i .5s,--a 0s .5s;
+       cursor: pointer;
+     }
+     img.alt {
+       --_a: -45deg;
+     }
+     img:hover {
+       --i: 1;
+       --a: 15turn; 
+       transition: --i 0s,--a 40s linear;
+     }
+		 header>h1{
+            margin: auto;
+            font-size: 4.5vw;
+            color: #ffffff44;
+		 }
+      /*aquí empieza el main*/
+        main{
+      	    display: flex;
+      	    flex-wrap: wrap;
+     	    justify-content: space-between;
+        }
+        main>section{
+        	margin: 2%;
+        	padding: 2%;
+        	border-right: 3px solid #ffffff99;
+
+        	width: 500px;
+        	min-width: 350px;
+        	border-radius: 10px;
+        	background: linear-gradient(45deg, #1c1c1c, #a0a0a0, #1e90ff, #0a74da);
+        }
+        main>section>p,h3{
+        	color: #ffffff99;
+        	margin: 1%;
+        	text-align: justify;
+        	text-shadow: 1px 1px #00000033;
+        	font-size: 2vw;
+        }
+        main>article{
+        	margin: 2%;
+        	padding: 2%;
+        	border-radius: 10px;
+        	background: linear-gradient(45deg, #0a74da, #1e90ff, #a0a0a0, #1c1c1c);
+        	border-left: 3px solid #ffffff99;
+        	color: #fff;
+        	            text-align: center;
+        	font-size: 2vw;
+        	width: 500px;
+        	min-width: 350px;
+        }
+        main>article>a>button{
+            background-color:  #A9A9A944;
+            color: white;
+            font-size: 2vw;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s,transform 0.2s;
+        }
+        main>article>a>button:hover{
+        	background-color: #ff0000;
+            transform: scale(1.05);
+            color: #A9A9A9;
+        }
+      /*cubo*/
+        .scene {
+           width: 200px;
+           height: 200px;
+           transform-style: preserve-3d;
+           animation: rotate 20s infinite linear;
+        }
+        .cube {
+          width: 50%;
+          height: 50%;
+          position: relative;
+          transform-style: preserve-3d;
+        }
+        .face {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          opacity: 0.8;
+          border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        .front {
+          transform: rotateY(0deg) translateZ(50px);
+          background-image: url("imagenes/css.jpg");
+        }
+        .right {
+          transform: rotateY(90deg) translateZ(50px);
+          background-image: url("imagenes/marketing.jpg");
+        }
+        .back {
+          transform: rotateY(180deg) translateZ(50px);
+          background-image: url("imagenes/ux/ui.jpg");
+        }
+        .left {
+          transform: rotateY(-90deg) translateZ(50px);
+          background-image: url("imagenes/wordpress.jpg");
+        }
+        .top {
+          transform: rotateX(90deg) translateZ(50px);
+          background-image: url("imagenes/git y github.jpg");
+        }
+        .bottom {
+          transform: rotateX(-90deg) translateZ(50px);
+          background-image: url("imagenes/ia.jpg");
+        }
+        @keyframes rotate {
+          0% {
+            transform: rotateX(0) rotateY(0);
+          }
+          100% {
+            transform: rotateX(360deg) rotateY(360deg);
+          }
+        } 
+    /* Footer */
+    footer {
+/*      background-color: rgba(0, 0, 0, 0.7);*/
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-size: 2.5vw;
+    }
+    footer>p>a {
+      color: #fff;
+      font-weight: bold;
+      margin: 0 10px;
+
+    }
+    footer>p>a:hover {
+      color: #ff0000;
+      font-size: 4vw;
+    }
+	</style>
+</head>
+<body>
+ <header>
+ 	<figure>
+ 	 <img src="imagenes/foto.webp" alt="mi foto" />
+ 	</figure><br />
+ 	<h1>Diseñador_Frontend_UX/UI</h1><br />
+ </header>
+ <main>
+  <section>
+ 	 <h3>Extracto Profesional:</h3><br/>
+ 	 <p>
+     Profesional con más de 30 años de experiencia en liderazgo de equipos, gestión eficiente y adaptación a entornos diversos. Durante más de 14 años como autónomo, he demostrado habilidades de emprendimiento, organización y cumplimiento de objetivos. Mi trayectoria abarca sectores como la construcción, el mantenimiento y la cristalería, destacando por mi versatilidad, compromiso y orientación a resultados.
+     Actualmente, estoy actualizando y redirigiendo mi carrera profesional hacia el desarrollo e implementación web. He completado formación en frontend, marketing digital, UX/UI e inteligencia artificial, y para 2025 tengo como objetivo especializarme en backend y seguir perfeccionando mis habilidades en UX/UI. Estoy motivado por continuar aportando valor mediante soluciones innovadoras y resultados efectivos en el ámbito tecnológico.
+ 	  </p>
+   </section>
+   <article>
+    <h3>Certificaciones:</h3>
+     <ul>
+      <li>Certificado en Frontend Development</li><br/>
+      <li>Certificado en UX/UI </li><br/>
+      <li>Certificación en Marketing Digital</li><br/>
+      <li>Certificado en Worpress Ecommerce</li><br/>
+     </ul>
+   	<a href="imagenes/cv.pdf" target="_blank"><button>DESCARGAR_CV</button></a>
+    <div class="scene">
+      <div class="cube">
+        <div class="face front"></div>
+        <div class="face back"></div>
+        <div class="face right"></div>
+        <div class="face left"></div>
+        <div class="face top"></div>
+        <div class="face bottom"></div>
+      </div>
+    </div>
+   </article>
+ </main>
+ <footer>
+ 	<p>© 2025 Mi Portafolio | <a href="https://linkedin.com/in/toni-pavón-díaz-94bb3b328" target="_blank">Linkedin</a> | <a href="https://github.com/Antonio-P-D/m-portafolio.git">GitHub</a> | <a href="mailto:tonipavon3@gmail.com">Contacto</a></p>
+ </footer>
+</body>
+</html>
